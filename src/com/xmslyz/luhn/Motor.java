@@ -43,7 +43,6 @@ public class Motor {
             this.checkedNumeral_int *= 2;
             if (this.checkedNumeral_int % 10 > 0 || this.checkedNumeral_int == 10) {
                 this.array[i - 1] = String.valueOf((this.checkedNumeral_int / 10) + (this.checkedNumeral_int % 10));
-
             }
         }
     }
