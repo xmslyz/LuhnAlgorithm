@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="032072d1-48cc-4be8-9866-840868de8fc0" name="Changes" comment="That's how I'm learning. &#10;I made 1st stage of a program.">
+    <list default="true" id="032072d1-48cc-4be8-9866-840868de8fc0" name="Changes" comment="After Maven wrapping">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664980483730</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="After Maven wrapping">
+      <created>1665388047285</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665388047285</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,7 +103,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="That's how I'm learning. &#10;I made 1st stage of a program." />
-    <option name="LAST_COMMIT_MESSAGE" value="That's how I'm learning. &#10;I made 1st stage of a program." />
+    <MESSAGE value="After Maven wrapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="After Maven wrapping" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
