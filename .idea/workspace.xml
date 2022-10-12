@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="032072d1-48cc-4be8-9866-840868de8fc0" name="Changes" comment="After Maven wrapping">
+    <list default="true" id="032072d1-48cc-4be8-9866-840868de8fc0" name="Changes" comment="Przebudowana struktura plików i folderów">
+      <changelist_data name="xmslyz" email="103496747+xmslyz@users.noreply.github.com" />
+      <change afterPath="$PROJECT_DIR$/src/com/xmslyz/luhn/logic/LuhnAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LuhnAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xmslyz/luhn/Luhn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xmslyz/luhn/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xmslyz/luhn/Motor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xmslyz/luhn/logic/Motor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xmslyz/luhn/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xmslyz/luhn/logic/Number.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xmslyz/luhn/OptionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xmslyz/luhn/main/OptionMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +20,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="xmslyz &lt;103496747+xmslyz@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -28,14 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "Lombok"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Lombok&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.xmslyz.luhn.main" />
+      <recent name="com.xmslyz.luhn.logic" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665388047285</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="After Maven wrapping">
+      <created>1665388388002</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665388388002</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,7 +126,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="logic-separation" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -104,7 +147,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="That's how I'm learning. &#10;I made 1st stage of a program." />
     <MESSAGE value="After Maven wrapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="After Maven wrapping" />
+    <MESSAGE value="Przebudowana struktura plików i folderów" />
+    <option name="LAST_COMMIT_MESSAGE" value="Przebudowana struktura plików i folderów" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <inline-watch fileUrl="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4.1/lib/src.zip!/java.base/java/lang/String.java" line="4537">
+        <watch expression="((String)this).value" language="JAVA" custom="java.lang.String" />
+      </inline-watch>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
