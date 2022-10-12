@@ -1,13 +1,12 @@
 package com.xmslyz.luhn.main;
 
-import com.xmslyz.luhn.logic.Motor;
-
+import com.xmslyz.luhn.logic.LuhnAlgorithmEngine;
 import java.util.Scanner;
 
-public class OptionMenu extends Motor {
+public class OptionMenu extends LuhnAlgorithmEngine {
 
 
-    public void getMainOptions() {
+    public String getMainOptions() {
         Scanner input = new Scanner(System.in);
         System.out.println("CHECKSUM OPERATOR");
         System.out.println("Chose wisely Your option :] ");
@@ -18,21 +17,27 @@ public class OptionMenu extends Motor {
         int selection = input.nextInt();
 
         switch (selection) {
-            case 1 -> compute();
-            case 2 -> System.out.println("Thank You & good bye.");
+            case 1 -> {
+                return getInputNumber();
+            }
+            case 2 -> {
+                System.out.print("Thank You & good bye.");
+                return null;
+            }
             default -> {
                 System.out.println("\nWrong option. I said \"choose wisely\"\n");
                 getMainOptions();
             }
         }
+        return null;
 }
     public static String getInputNumber() {
         Scanner input = new Scanner(System.in);
-        System.out.print("Number to put CHECKSUM:");
+        System.out.print("Number to put CHECKSUM: ");
         return input.nextLine();
     }
     public static void codeNumber(String codeNumber){
-        System.out.println("Your new CHECKSUM is: " + codeNumber);
+        System.out.print("Your new CHECKSUM is: " + codeNumber);
     }
 
 }
