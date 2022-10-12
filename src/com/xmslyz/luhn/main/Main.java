@@ -1,6 +1,6 @@
-package com.xmslyz.luhn;
+package com.xmslyz.luhn.main;
 
-public class Luhn {
+public class Main {
     public static void main(String[] args) {
         OptionMenu optionMenu = new OptionMenu();
         optionMenu.getMainOptions();
