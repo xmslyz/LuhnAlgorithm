@@ -46,17 +46,17 @@ class LuhnChecksumComputingTest {
 
     @Test
     void visaNumber(){
-        var result = computation.compute("400360000000001");
+        var result = computation.compute("400360000000002");
 
-        assertEquals("4003600000000014", result);
+        assertEquals("4003600000000012", result);
     }
+
 
     @Test
     void onlyZeros(){
         var result = computation.compute("000000000000");
 
         assertEquals("0000000000000", result);
-        // chociaż przy zerach program powinien obcinać zera chyba
     }
 
     @Test
