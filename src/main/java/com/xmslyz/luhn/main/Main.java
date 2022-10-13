@@ -9,9 +9,9 @@ public class Main {
         UserOptionMenu userOptionMenu = new UserOptionMenu();
         userOptionMenu.greetUser();
         String inputNumber = userOptionMenu.getMainOptions();
-        if (inputNumber != null){
-        ChecksumPrinter.printChecksum(computation.compute(inputNumber));
-        userOptionMenu.getMainOptions();
+        if (computation.compute(inputNumber) != null){
+            ChecksumPrinter.printChecksum(computation.compute(inputNumber));
         }
+        System.out.println("Thank You & good bye.");
     }
 }

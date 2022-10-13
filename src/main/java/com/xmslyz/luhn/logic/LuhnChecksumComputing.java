@@ -8,12 +8,17 @@ public class LuhnChecksumComputing implements Computation {
 
     @Override
     public String compute(String input) {
-        this.number = input;
-        setArray(number.length());
-        multiplyWages();
-        countTotal();
-        getChecksum();
-        return this.checkSum;
+        try {
+            this.number = input.trim().replace(" ", "");
+            setArray(number.length());
+            multiplyWages();
+            countTotal();
+            getChecksum();
+            return this.checkSum;
+        } catch (NumberFormatException | NullPointerException e) {
+            System.out.println("Input error.");
+        }
+        return null;
     }
 
     public void setArray(int stringLenght) {

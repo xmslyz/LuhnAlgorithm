@@ -12,8 +12,6 @@ public class UserOptionMenu {
 
     public String getMainOptions() {
         Scanner input = new Scanner(System.in);
-        System.out.println("[1] Generate Checksum");
-        System.out.println("[2] Exit");
         System.out.print(">>> ");
 
         try {
@@ -23,15 +21,17 @@ public class UserOptionMenu {
                 }
                 case 2 -> {
                     System.out.println("Thank You & good bye.");
-                    return null;
+                    System.exit(0);
                 }
+//                default -> {
+//                    System.out.println("Please enter correct option.");
+//                    getMainOptions();
+//                }
         }
-            System.out.println("\nWrong option. I said \"choose wisely\"\n");
-            return getMainOptions();
         } catch (InputMismatchException ex){
-            System.out.println("\nNot a number\n");
-            return getMainOptions();
+            System.exit(0);
         }
+        return null;
     }
 
     private String getInputNumber() {
