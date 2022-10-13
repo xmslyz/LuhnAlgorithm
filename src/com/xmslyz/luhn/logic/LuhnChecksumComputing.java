@@ -1,6 +1,6 @@
 package com.xmslyz.luhn.logic;
 
-public class LuhnAlgorithmEngine implements LuhnAlgorithm {
+public class LuhnChecksumComputing implements Computation {
 
     String number, checkSum;
     String[] array;
@@ -10,13 +10,13 @@ public class LuhnAlgorithmEngine implements LuhnAlgorithm {
     public String compute(String input) {
         this.number = input;
         setArray(setLenght());
-        MultiplyOdds();
-        Total();
-        getCheckSum();
+        multiplyWages();
+        countTotal();
+        getChecksum();
         return this.checkSum;
     }
 
-    protected int setLenght() {
+    public int setLenght() {
         Number numberToCodeLenght = new Number(number.length());
         return numberToCodeLenght.getLength();
 //        return number.length();
@@ -30,7 +30,7 @@ public class LuhnAlgorithmEngine implements LuhnAlgorithm {
         }
     }
 
-        public void MultiplyOdds() {
+        public void multiplyWages() {
             for (int i = array.length; i > 0; i -= 2) {
                 checkedNumeral = Integer.parseInt(array[i - 1]);
                 checkedNumeral *= 2;
@@ -39,14 +39,14 @@ public class LuhnAlgorithmEngine implements LuhnAlgorithm {
                 }
             }
         }
-        public void Total() {
+        public void countTotal() {
             for (String s : array) {
                 int arrInt = Integer.parseInt(s);
                 total += arrInt;
             }
         }
 
-        public void getCheckSum(){
+        public void getChecksum(){
             mod10 = total % 10;
             if (mod10 != 0) {
                 codeNumber = 10 - mod10;
