@@ -14,7 +14,7 @@ class LuhnChecksumComputingTest {
 
         assertEquals("79927398713", result);
     }
-//    coś co nie jest liczbą
+
     @Test
     void notANumber() {
         var result = computation.compute("123e4");
@@ -24,6 +24,7 @@ class LuhnChecksumComputingTest {
     void negativeNumber(){
         var result = computation.compute("-4");
     }
+
     @Test
     void emptyString(){
         var result = computation.compute("");
@@ -33,23 +34,29 @@ class LuhnChecksumComputingTest {
     void zeroAsInput(){
         var result = computation.compute("0");
 
+        assertEquals("00", result);
     }
 
     @Test
     void oneAsInput(){
         var result = computation.compute("1");
 
+        assertEquals("18", result);
     }
 
     @Test
     void visaNumber(){
         var result = computation.compute("400360000000001");
+
+        assertEquals("4003600000000014", result);
     }
 
     @Test
     void onlyZeros(){
         var result = computation.compute("000000000000");
 
+        assertEquals("0000000000000", result);
+        // chociaż przy zerach program powinien obcinać zera chyba
     }
 
     @Test
@@ -60,6 +67,8 @@ class LuhnChecksumComputingTest {
     @Test
     void numberWithSpace(){
     var result = computation.compute("123 4567");
+
+    assertEquals("12345674", result);
     }
 
     @Test
