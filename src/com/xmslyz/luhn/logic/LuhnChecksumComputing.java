@@ -9,17 +9,11 @@ public class LuhnChecksumComputing implements Computation {
     @Override
     public String compute(String input) {
         this.number = input;
-        setArray(setLenght());
+        setArray(number.length());
         multiplyWages();
         countTotal();
         getChecksum();
         return this.checkSum;
-    }
-
-    public int setLenght() {
-        Number numberToCodeLenght = new Number(number.length());
-        return numberToCodeLenght.getLength();
-//        return number.length();
     }
 
     public void setArray(int stringLenght) {
