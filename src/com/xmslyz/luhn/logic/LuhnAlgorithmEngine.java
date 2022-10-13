@@ -19,6 +19,7 @@ public class LuhnAlgorithmEngine implements LuhnAlgorithm {
     protected int setLenght() {
         Number numberToCodeLenght = new Number(number.length());
         return numberToCodeLenght.getLength();
+//        return number.length();
     }
 
     public void setArray(int stringLenght) {

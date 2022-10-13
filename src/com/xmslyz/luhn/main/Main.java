@@ -1,14 +1,18 @@
 package com.xmslyz.luhn.main;
 
+import com.xmslyz.luhn.logic.LuhnAlgorithm;
 import com.xmslyz.luhn.logic.LuhnAlgorithmEngine;
 
 public class Main {
     public static void main(String[] args) {
-        LuhnAlgorithmEngine luhnAlgorithmEngine = new LuhnAlgorithmEngine();
-        OptionMenu optionMenu = new OptionMenu();
-        String inputNumber = optionMenu.getMainOptions();
+        LuhnAlgorithm luhnAlgorithm = new LuhnAlgorithmEngine();
+        UserOptionMenu userOptionMenu = new UserOptionMenu();
+        userOptionMenu.greetUser();
+        String inputNumber = userOptionMenu.getMainOptions();
         if (inputNumber != null){
-        OptionMenu.codeNumber(luhnAlgorithmEngine.compute(inputNumber));
+        PrintChecksum.printChecksum(luhnAlgorithm.compute(inputNumber));
+        userOptionMenu.getMainOptions();
+
         }
     }
 }

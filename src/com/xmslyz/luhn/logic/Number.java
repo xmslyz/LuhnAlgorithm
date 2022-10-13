@@ -7,11 +7,6 @@ class Number {
         setLength(length);
     }
 
-//    public Number(int length) {
-//        //this.type = type;
-//        this.length = length;
-//        //this.itsClass = itsClass;
-//    }
 
 //    public String getType() {
 //        String type = "digit";
@@ -21,6 +16,7 @@ class Number {
 //    public String getItsClass() {
 //        String itsClass = "String";
 //        return itsClass;
+//    4992739871
 //    }
 
     public int getLength() {
