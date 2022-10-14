@@ -1,11 +1,11 @@
 package com.xmslyz.luhn.logic;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class LuhnChecksumComputingTest {
 
+    @SuppressWarnings("all")
     private Computation computation = new LuhnChecksumComputing();
 
     @Test
@@ -17,17 +17,22 @@ class LuhnChecksumComputingTest {
 
     @Test
     void notANumber() {
-        var result = computation.compute("123e4");
+        assertThrows(NumberFormatException.class, () -> computation.compute(String.valueOf(Integer.parseInt("1q234"))),
+                "Not a number");
     }
 
     @Test
     void negativeNumber(){
-        var result = computation.compute("-4");
+        assertThrows(NumberFormatException.class,
+                () -> computation.compute(String.valueOf(Integer.parseInt("-4"))),
+                "negative number");
     }
 
     @Test
     void emptyString(){
-        var result = computation.compute("");
+        assertThrows(NumberFormatException.class,
+                () -> computation.compute(String.valueOf(Integer.parseInt(""))),
+                "empty string");
     }
 
     @Test
@@ -48,7 +53,7 @@ class LuhnChecksumComputingTest {
     void visaNumber(){
         var result = computation.compute("400360000000002");
 
-        assertEquals("4003600000000012", result);
+        assertEquals("4003600000000022", result);
     }
 
 
@@ -60,8 +65,10 @@ class LuhnChecksumComputingTest {
     }
 
     @Test
-    void notAlfanumeric(){
-        var result = computation.compute("!@#$%");
+    void notAlphanumeric(){
+        assertThrows(NumberFormatException.class,
+                () -> computation.compute(String.valueOf(Integer.parseInt("!@#$"))),
+                "Not alphanumeric");
     }
 
     @Test
@@ -73,6 +80,9 @@ class LuhnChecksumComputingTest {
 
     @Test
     void nullInput(){
-        var result = computation.compute(null);
+        assertThrows(NullPointerException.class, () -> computation.compute(null),
+                "expected not-null input");
+
     }
+
 }

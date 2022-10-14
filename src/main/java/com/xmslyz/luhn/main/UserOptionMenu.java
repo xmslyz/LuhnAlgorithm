@@ -31,7 +31,8 @@ public class UserOptionMenu {
         } catch (InputMismatchException ex){
             System.exit(0);
         }
-        return null;
+        System.out.println("Choose between CheckSum [1] and Exit [2] ? ");
+        return getMainOptions();
     }
 
     private String getInputNumber() {

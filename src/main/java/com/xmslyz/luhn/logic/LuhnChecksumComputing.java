@@ -8,18 +8,17 @@ public class LuhnChecksumComputing implements Computation {
 
     @Override
     public String compute(String input) {
-        try {
-            this.number = input.trim().replace(" ", "");
-            setArray(number.length());
-            multiplyWages();
-            countTotal();
-            getChecksum();
-            return this.checkSum;
-        } catch (NumberFormatException | NullPointerException e) {
-            System.out.println("Input error.");
+        if (input == null) throw new NullPointerException("Expected not-null input");
+        if (input.isEmpty()) throw new IllegalArgumentException("Expected empty string");
+        this.number = input.trim().replace(" ", "");
+        if (Long.parseLong(number) < 0 ) throw new NumberFormatException("Expected number < 0");
+        setArray(number.length());
+        multiplyWages();
+        countTotal();
+        getChecksum();
+        return this.checkSum;
         }
-        return null;
-    }
+
 
     public void setArray(int stringLenght) {
         array = new String[stringLenght];
