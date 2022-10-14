@@ -84,5 +84,15 @@ class LuhnChecksumComputingTest {
                 "expected not-null input");
 
     }
+    @Test
+    void maxLongNumber(){
+        var result = computation.compute("9223372036854775807");
+        assertEquals("92233720368547758074", result);
+    }
 
+    @Test
+    void longPlusOneNumber(){
+        assertThrows(NumberFormatException.class, () -> computation.compute("9223372036854775809"),
+                "number too large");
+    }
 }
