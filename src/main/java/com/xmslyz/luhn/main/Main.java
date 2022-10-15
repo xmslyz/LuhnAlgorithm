@@ -3,6 +3,8 @@ package com.xmslyz.luhn.main;
 import com.xmslyz.luhn.logic.Computation;
 import com.xmslyz.luhn.logic.LuhnChecksumComputing;
 
+import java.math.BigInteger;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -11,7 +13,9 @@ public class Main {
         userOptionMenu.greetUser();
         String inputNumber = userOptionMenu.getMainOptions();
         try {
-            if (Integer.parseInt(computation.compute(inputNumber)) <= 0) System.out.println("Input number should be grater than O");
+            if (new BigInteger(computation.compute(inputNumber)).signum() < 0 ) {
+                System.out.println("Input number should be grater than O");
+            }
             else {
                 computation.compute(inputNumber);
                 ChecksumPrinter.printChecksum(computation.compute(inputNumber));
