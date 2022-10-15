@@ -1,3 +1,7 @@
+![](https://github.com/kolorobot/spring-boot-junit5/workflows/tests/badge.svg)
+
+https://github.com/xmslyz/LuhnAlgorithm/workflows/tests.yml/badge.svg
+
 # LuhnAlgorithm
 Algorytm ten wygląda następująco:
 
