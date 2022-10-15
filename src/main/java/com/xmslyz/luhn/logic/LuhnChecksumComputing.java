@@ -1,5 +1,7 @@
 package com.xmslyz.luhn.logic;
 
+import java.math.BigInteger;
+
 public class LuhnChecksumComputing implements Computation {
 
     String number, checkSum;

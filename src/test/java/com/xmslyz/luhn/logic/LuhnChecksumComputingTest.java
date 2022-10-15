@@ -89,9 +89,9 @@ class LuhnChecksumComputingTest {
         assertEquals("92233720368547758074", result);
     }
 
-    @Test
-    void longPlusOneNumber(){
-        assertThrows(NumberFormatException.class, () -> computation.compute("9223372036854775809"),
-                "number too large");
-    }
+    @Test void bigNumberTest() {
+            var result = computation.compute("85502769294714727290219296850855013652640660699718");
+
+            assertEquals("855027692947147272902192968508550136526406606997186", result);
+        }
 }
