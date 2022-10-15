@@ -9,7 +9,7 @@ public class LuhnChecksumComputing implements Computation {
     @Override
     public String compute(String input) {
         if (input == null) throw new NullPointerException("Expected not-null input");
-        if (input.isEmpty()) throw new IllegalArgumentException("Expected empty string");
+        if (input.isEmpty()) throw new IllegalArgumentException("Expected non-empty string");
         this.number = input.trim().replace(" ", "");
         if (new BigInteger(number).signum() < 0) throw new NumberFormatException("Expected number >= 0");
         setArray(number.length());
