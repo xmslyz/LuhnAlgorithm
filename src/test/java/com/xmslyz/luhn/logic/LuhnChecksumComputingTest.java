@@ -5,8 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LuhnChecksumComputingTest {
 
-    @SuppressWarnings("all")
-    private Computation computation = new LuhnChecksumComputing();
+    private final Computation computation = new LuhnChecksumComputing();
 
     @Test
     void wikipedia_example() {
