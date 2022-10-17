@@ -6,7 +6,7 @@ public class LuhnChecksumComputing implements Computable {
 
     String[] array;
     BigInteger number;
-    int total, checkedNumeral;
+    int total, checkedNumeral, digitLength;
     String checkSum;
     int arrInt;
 
@@ -14,6 +14,7 @@ public class LuhnChecksumComputing implements Computable {
     public String compute(LuhnCandidate luhnCandidate) {
         number = luhnCandidate.getNumber();
         array = luhnCandidate.getDigits();
+        digitLength = luhnCandidate.getDigitCount();
         multiplyWages();
         countTotal();
         getChecksum();
@@ -21,7 +22,7 @@ public class LuhnChecksumComputing implements Computable {
     }
 
     private void multiplyWages() {
-        for (int i = array.length; i > 0; i -= 2) {
+        for (int i = digitLength; i > 0; i -= 2) {
             checkedNumeral = Integer.parseInt(array[i - 1]);
             checkedNumeral *= 2;
             if (checkedNumeral % 10 > 0 || checkedNumeral == 10) {
