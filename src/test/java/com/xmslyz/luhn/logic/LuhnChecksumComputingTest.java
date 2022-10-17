@@ -16,22 +16,17 @@ class LuhnChecksumComputingTest {
 
     @Test
     void notANumber() {
-        assertThrows(NumberFormatException.class, () -> computation.compute(String.valueOf(Integer.parseInt("1q234"))),
-                "Not a number");
+        assertThrows(InputValidationException.class, () -> computation.compute("1r23e4"), "Expected only digits");
     }
 
     @Test
-    void negativeNumber(){
-        assertThrows(NumberFormatException.class,
-                () -> computation.compute(String.valueOf(Integer.parseInt("-4"))),
-                "negative number");
+    void notAlphanumeric(){
+        assertThrows(InputValidationException.class, () -> computation.compute("!@#$"), "Expected only digits");
     }
 
     @Test
     void emptyString(){
-        assertThrows(NumberFormatException.class,
-                () -> computation.compute(String.valueOf(Integer.parseInt(""))),
-                "empty string");
+        assertThrows(NumberFormatException.class, () -> computation.compute(String.valueOf(Integer.parseInt(""))), "empty string");
     }
 
     @Test
@@ -63,12 +58,7 @@ class LuhnChecksumComputingTest {
         assertEquals("0000000000000", result);
     }
 
-    @Test
-    void notAlphanumeric(){
-        assertThrows(NumberFormatException.class,
-                () -> computation.compute(String.valueOf(Integer.parseInt("!@#$"))),
-                "Not alphanumeric");
-    }
+
 
     @Test
     void numberWithSpace(){
