@@ -1,39 +1,23 @@
 package com.xmslyz.luhn.logic;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 import java.math.BigInteger;
 
-public class LuhnChecksumComputing implements Computation {
+public class LuhnChecksumComputing implements Computable {
 
-    String number, checkSum;
     String[] array;
-    int checkedNumeral, total, mod10, codeNumber;
+    BigInteger number;
+    int total, checkedNumeral;
+    String checkSum;
+    int arrInt;
 
     @Override
-    public String compute(String input) {
-        validate(input.replaceAll("\\s+", ""));
-        this.number = input.replaceAll("\\s+", "");
-        setArray(number.length());
+    public String compute(LuhnCandidate luhnCandidate) {
+        number = luhnCandidate.getNumber();
+        array = luhnCandidate.getDigits();
         multiplyWages();
         countTotal();
         getChecksum();
-        return this.checkSum;
-    }
-
-    private void validate(String input){
-        if (input == null) throw new InputValidationException("Expected not-null input");
-        if (input.isEmpty()) throw new InputValidationException("Expected non-empty string");
-        if (!NumberUtils.isDigits(input)) throw new InputValidationException("Expected only digits");
-        if (new BigInteger(input.replaceAll("\\s+", "")).signum() < 0) throw new InputValidationException("Expected number >= 0");
-    }
-
-    private void setArray(int stringLenght) {
-        array = new String[stringLenght];
-        for (int i = 0; i < stringLenght; i++) {
-            String charFromString = String.valueOf(number.charAt(i));
-            array[i] = charFromString;
-        }
+        return checkSum;
     }
 
     private void multiplyWages() {
@@ -48,18 +32,19 @@ public class LuhnChecksumComputing implements Computation {
 
     private void countTotal() {
         for (String s : array) {
-            int arrInt = Integer.parseInt(s);
+            arrInt = Integer.parseInt(s);
             total += arrInt;
         }
     }
 
     private void getChecksum(){
-        mod10 = total % 10;
+        int mod10 = total % 10;
+
         if (mod10 != 0) {
-            codeNumber = 10 - mod10;
-            checkSum = number + codeNumber;
+            int codeNumber = 10 - mod10;
+            checkSum = number.toString() + codeNumber;
         } else {
-            checkSum = number + 0;
+            checkSum = number.toString() + 0;
         }
     }
 }
