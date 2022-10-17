@@ -1,7 +1,6 @@
 package com.xmslyz.luhn.main;
 
-import com.xmslyz.luhn.logic.Computation;
-import com.xmslyz.luhn.logic.LuhnChecksumComputing;
+import com.xmslyz.luhn.logic.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class Main {
         try {
             var result = computation.compute(inputNumber);
             ChecksumPrinter.printChecksum(result);
-        } catch (com.xmslyz.luhn.logic.InputValidationException e){
+        } catch (InputValidationException e){
             System.out.println("Wrong input: " + e.getMessage());
         }
     }
