@@ -4,11 +4,10 @@ import java.math.BigInteger;
 
 public class LuhnChecksumComputing implements Computable {
 
-    String[] array;
-    BigInteger number;
-    int total, checkedNumeral, digitLength;
+    int total, checkedNumeral, digitLength, arrInt;
     String checkSum;
-    int arrInt;
+    BigInteger number;
+    String[] array;
 
     @Override
     public String compute(LuhnCandidate luhnCandidate) {

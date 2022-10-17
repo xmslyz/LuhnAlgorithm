@@ -26,15 +26,9 @@ public class LuhnCandidate {
             throw new InputValidationException("Expected number >= 0");
     }
 
-    public BigInteger getNumber() {
-        return number;
-    }
+    public BigInteger getNumber() { return number; }
 
-    public Integer getDigitCount() {
-        return digits.length;
-    }
+    public Integer getDigitCount() { return digits.length; }
 
-    public String[] getDigits() {
-        return digits;
-    }
+    public String[] getDigits() { return digits; }
 }
