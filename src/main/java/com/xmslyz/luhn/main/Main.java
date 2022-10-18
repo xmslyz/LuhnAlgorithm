@@ -16,5 +16,6 @@ public class Main {
         } catch (InputValidationException e){
             System.out.println("Wrong input: " + e.getMessage());
         }
+
     }
 }

@@ -14,8 +14,6 @@ Algorytm ten wygląda następująco:
 - Wykonuje się operację mod 10 na otrzymanej sumie (pozostawia się jedynie cyfrę jedności).
 - Następnie, jeśli otrzymana cyfra nie równa się 0, odejmuje się ją od 10. Otrzymano cyfrę kontrolną, która jest
   "doklejana" do liczby. W innym przypadku dokleją się 0 jako sumę kontrolną
-- [DO ZROBIENIA] Sprawdzenie poprawności liczby odbywa się poprzez zastosowanie na całej liczbie (łącznie z cyfrą
-  kontrolną) kroków 1-5. Jeżeli liczba jest poprawna, otrzyma się w wyniku zero.
 
             * PRZYKŁAD
             * Dana jest liczba 92480[_].     
@@ -34,3 +32,9 @@ Algorytm ten wygląda następująco:
             * Wykonuje się operację mod 10: 27 mod 10 = 7.
             * 7 ≠ 0, więc wykonuje się operację 10 – 7 = 3.
             * Cyfrę kontrolną 3 "dokleja się" do liczby, otrzymując 92480[3].
+
+
+[TO DO] 
+1. Wprowadznie w MENU opcji "Walidacja sumy kontrolnej". Sprawdzenie poprawności czy wprowadzona liczba zawierajaca checksum jest poprawna.
+2. Metody zapisujące/odczytujace wynik/wyniki w/z pliku .txt
+3. Batch generating/validating.
