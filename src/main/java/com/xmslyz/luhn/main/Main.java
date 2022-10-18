@@ -10,8 +10,8 @@ public class Main {
         userOptionMenu.greetUser();
         String inputNumber = userOptionMenu.getMainOptions();
         try {
-            LuhnCandidate luhnCandidate = new LuhnCandidate(inputNumber);
-            var result = computable.compute(luhnCandidate);
+            Candidate candidate = new Candidate(inputNumber);
+            var result = computable.compute(candidate);
             ChecksumPrinter.printChecksum(result);
         } catch (InputValidationException e){
             System.out.println("Wrong input: " + e.getMessage());

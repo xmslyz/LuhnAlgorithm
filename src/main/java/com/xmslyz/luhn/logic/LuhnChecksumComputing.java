@@ -10,10 +10,10 @@ public class LuhnChecksumComputing implements Computable {
     String[] array;
 
     @Override
-    public String compute(LuhnCandidate luhnCandidate) {
-        number = luhnCandidate.getNumber();
-        array = luhnCandidate.getDigits();
-        digitLength = luhnCandidate.getDigitCount();
+    public String compute(Candidate candidate) {
+        number = candidate.getNumber();
+        array = candidate.getDigits();
+        digitLength = candidate.getDigitCount();
         multiplyWages();
         countTotal();
         getChecksum();
