@@ -30,7 +30,7 @@ class LuhnCandidateTest {
     void numberWithSpace(){
         var result = new Candidate("123 4567 8912 3456 7890");
 
-        assertEquals(BigInteger.valueOf(Long.parseLong("1234567891234567890")), result.getNumber());
+        assertEquals(new BigInteger("1234567891234567890"), result.getNumber());
     }
 
     @Test
