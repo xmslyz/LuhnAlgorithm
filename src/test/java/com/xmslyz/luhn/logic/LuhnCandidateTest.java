@@ -32,4 +32,16 @@ class LuhnCandidateTest {
 
         assertEquals(BigInteger.valueOf(Long.parseLong("1234567891234567890")), result.getNumber());
     }
+
+    @Test
+    void zeroAsInput(){
+        assertThrows(InputValidationException.class, () -> new Candidate("0"), "Expected number > 0");
+    }
+
+
+    @Test
+    void onlyZeros(){
+        assertThrows(InputValidationException.class, () -> new Candidate("000000000000"), "Expected number > 0");
+    }
+
 }

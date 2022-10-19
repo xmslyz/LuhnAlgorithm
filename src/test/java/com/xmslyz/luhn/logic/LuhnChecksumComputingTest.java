@@ -16,13 +16,6 @@ class LuhnChecksumComputingTest {
     }
 
     @Test
-    void oneAsInput(){
-        var result = computable.compute(new Candidate("1"));
-
-        assertEquals("18", result);
-    }
-
-    @Test
     void visaNumber(){
         var result = computable.compute(new Candidate("400360000000002"));
 
@@ -30,14 +23,10 @@ class LuhnChecksumComputingTest {
     }
 
     @Test
-    void zeroAsInput(){
-        assertThrows(InputValidationException.class, () -> computable.compute(new Candidate("0")), "Expected number > 0");
-    }
+    void oneAsInput(){
+        var result = computable.compute(new Candidate("1"));
 
-
-    @Test
-    void onlyZeros(){
-        assertThrows(InputValidationException.class, () -> computable.compute(new Candidate("000000000000")), "Expected number > 0");
+        assertEquals("18", result);
     }
 
     @Test
