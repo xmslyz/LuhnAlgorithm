@@ -4,12 +4,10 @@ import com.xmslyz.luhn.logic.*;
 
 public class Main {
     public static void main(String[] args) {
-
-        Computable computable = new LuhnChecksumComputing();
-        UserOptionMenu userOptionMenu = new UserOptionMenu();
-        userOptionMenu.greetUser();
-        String inputNumber = userOptionMenu.getMainOptions();
+        UserOptionMenu.greetUser();
+        String inputNumber = UserOptionMenu.getMainOptions();
         try {
+            Computable computable = new LuhnChecksumComputing();
             Candidate candidate = new Candidate(inputNumber);
             var result = computable.compute(candidate);
             ChecksumPrinter.printChecksum(result);

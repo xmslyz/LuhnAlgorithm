@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class UserOptionMenu {
 
-    public void greetUser() {
+    public static void greetUser() {
         System.out.println("CHECKSUM OPERATOR");
         System.out.println("What do You want me to do?\nGenerate CheckSum [1] or Exit [2] ? ");
     }
 
-    public String getMainOptions() {
+    public static String getMainOptions() {
         Scanner input = new Scanner(System.in);
         System.out.print(">>> ");
 
@@ -23,19 +23,15 @@ public class UserOptionMenu {
                     System.out.println("Thank You & good bye.");
                     System.exit(0);
                 }
-//                default -> {
-//                    System.out.println("Please enter correct option.");
-//                    getMainOptions();
-//                }
-        }
+            }
         } catch (InputMismatchException ex){
             System.exit(0);
-        }
+            }
         System.out.println("Choose between CheckSum [1] and Exit [2] ? ");
         return getMainOptions();
     }
 
-    private String getInputNumber() {
+    private static String getInputNumber() {
         Scanner input = new Scanner(System.in);
         System.out.println("Number to put CHECKSUM: ");
         return input.nextLine();
